@@ -1,0 +1,20 @@
+{
+  "name": "book-bunny",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeBaobab3/Book-Bunny.git"
+  },
+  "author": "Leila A.",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LeBaobab3/Book-Bunny/issues"
+  },
+  "homepage": "https://github.com/LeBaobab3/Book-Bunny#readme"
+}
