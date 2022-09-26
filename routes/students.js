@@ -5,12 +5,14 @@ const studentsController = require("../controllers/students");
 const { ensureAuth, ensureGuest } = require("../middleware/auth");
 
 //Post Routes - simplified for now
+router.get("/", studentsController.getStudent);
+
 router.get("/:id", ensureAuth, studentsController.getStudent);
 
 router.post(
   "/addStudent",
   upload.single("file"),
-  studentsController.addStudent
+  studentsController.createStudent
 );
 
 router.delete("/deleteStudent/:id", studentsController.deleteStudent);

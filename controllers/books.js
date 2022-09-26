@@ -10,7 +10,7 @@ module.exports = {
       console.log(err);
     }
   },
-  getDash: async (req, res) => {
+  getLibrary: async (req, res) => {
     try {
       const books = await Book.find({ user: req.user.id });
       res.render("library.ejs", { books: books, user: req.user });
@@ -32,12 +32,12 @@ module.exports = {
       console.log(err);
     }
   },
-  addBook: async (req, res) => {
+  createBook: async (req, res) => {
     try {
       // Upload image to cloudinary
       const result = await cloudinary.uploader.upload(req.file.path);
 
-      await Book.add({
+      await Book.create({
         title: req.body.title,
         author: req.body.author,
         image: result.secure_url,
@@ -46,7 +46,7 @@ module.exports = {
         user: req.user.id,
       });
       console.log("Book has been added!");
-      res.redirect("/book");
+      res.redirect("/dash");
     } catch (err) {
       console.log(err);
     }

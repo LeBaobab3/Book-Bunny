@@ -4,9 +4,6 @@ module.exports = {
   getStudent: async (req, res) => {
     try {
       const student = await Student.findById(req.params.id);
-      // const comments = await Comment.find({ post: req.params.id })
-      //   .sort({ createdAt: "desc" })
-      //   .lean();
       res.render("student.ejs", {
         student: student,
         user: req.user,
@@ -15,9 +12,9 @@ module.exports = {
       console.log(err);
     }
   },
-  addStudent: async (req, res) => {
+  createStudent: async (req, res) => {
     try {
-      await Student.add({
+      await Student.create({
         firstName: req.body.firstName,
         lastName: req.body.lastName,
         user: req.user.id,
