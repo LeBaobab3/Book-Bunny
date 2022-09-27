@@ -2,18 +2,18 @@
 Inter-classroom Book Sharing APP
 
 Features
-Student List
-User(teacher) List
-Showing the book list by all the users (teachers)
-Check out and return books
-Add Book with image
+Student List <br>
+User(teacher) List  <br>
+Showing the book list by all the users (teachers) <br>
+Check out and return books  <br>
+Add Book with image  <br>
 
 Stack :
-NodeJS - JavaScript Run Time Environment
-ExpressJS - NodeJS Framework
-MongoDB - NoSQL Database
-Mongoose - MongoDB Object Modeling
-Embedded JavaScript Templates (EJS) - View Engine
+NodeJS - JavaScript Run Time Environment  <br>
+ExpressJS - NodeJS Framework  <br>
+MongoDB - NoSQL Database  <br>
+Mongoose - MongoDB Object Modeling  <br>
+Embedded JavaScript Templates (EJS) - View Engine  <br>
 
 Run :
 npm start
