@@ -1,14 +1,14 @@
 # Book-Bunny
 Inter-classroom Book Sharing APP
 
-Features
+Features:  <br>
 Student List <br>
 User(teacher) List  <br>
 Showing the book list by all the users (teachers) <br>
 Check out and return books  <br>
 Add Book with image  <br>
 
-Stack :
+Stack :  <br>
 NodeJS - JavaScript Run Time Environment  <br>
 ExpressJS - NodeJS Framework  <br>
 MongoDB - NoSQL Database  <br>
