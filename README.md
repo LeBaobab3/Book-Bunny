@@ -1,5 +1,5 @@
 # Book-Bunny
-Inter-classroom Book Sharing APP
+Inter-classroom Book Sharing App
 
 Features:  <br>
 Student List <br>
