@@ -21,6 +21,10 @@ const StudentSchema = new mongoose.Schema({
   //   type: Number,
   //   required: true,
   // },
+  registered_on: {
+    type: Date,
+    default: new Date(),
+  },
 });
 
 module.exports = mongoose.model("Student", StudentSchema);

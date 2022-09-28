@@ -4,7 +4,10 @@
       <div class="col-6">
          
           <div class="mt-5">
-            <h2>Add a student</h2>
+
+          
+        
+            <h2>ADD A STUDENT</h2>
             <form action="/student/addStudent" enctype="multipart/form-data" method="POST">
               <div class="mb-3">
                   <label for="firstName" class="form-label">First Name</label>
@@ -12,17 +15,28 @@
               </div>
               <div class="mb-3">
                 <label for="lastName" class="form-label">Last Name</label>
-                <textarea class="form-control" id="lastName" name="lastName"></textarea>
+                <input type="text" class="form-control" id="lastName" name="lastName"></textarea>
               </div>
               <div class="mb-3">
-                <label for="imgUpload" class="form-label">Image</label>
-                <input type="file" class="form-control" id="imageUpload" name="file">
+                <label for="registered_on" class="form-label">Date Registered</label>
+                <input type="date"  id="registered_on" name="registered_on"></textarea>
               </div>
               <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
             </form>
+
+
           </div>
       </div>
+
+      <!-- <table>
+        <tr>
+           <th>First Name</th><th>Last Name</th><th> Registered on</th>
+        </tr> -->
+
+      
      
+        
+     </table>
         <div class="row justify-content-center mt-5">
           <a class="btn btn-primary" href="/dash">Return to Dashboard</a>
         </div>  
