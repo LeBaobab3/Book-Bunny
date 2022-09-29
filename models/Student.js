@@ -9,21 +9,21 @@ const StudentSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  // checkOut: {
-  //   type: Number,
-  //   required: true,
-  // },
-  // OverDue: {
-  //   type: Number,
-  //   required: true,
-  // },
-  // read: {
-  //   type: Number,
-  //   required: true,
-  // },
   registered_on: {
     type: Date,
     default: new Date(),
+  },
+  checkedOut: {
+    type: String,
+    required: true,
+  },
+  overDue: {
+    type: Number,
+    required: true,
+  },
+  renew: {
+    type: Number,
+    required: true,
   },
 });
 

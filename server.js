@@ -11,6 +11,7 @@ const connectDB = require("./config/database");
 const mainRoutes = require("./routes/main");
 const bookRoutes = require("./routes/books");
 const studentRoutes = require("./routes/students");
+const bookAssignedRoutes = require("./routes/bookAssigned");
 
 //Use .env file in config folder
 require("dotenv").config({ path: "./config/.env" });
@@ -58,6 +59,7 @@ app.use(flash());
 app.use("/", mainRoutes);
 app.use("/book", bookRoutes);
 app.use("/student", studentRoutes);
+app.use("/book-assign", bookAssignedRoutes);
 
 //Server Running
 app.listen(process.env.PORT, () => {

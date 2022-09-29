@@ -3,7 +3,8 @@ const Student = require("../models/Student");
 module.exports = {
   getStudent: async (req, res) => {
     try {
-      const student = await Student.findById(req.params.id);
+      const student = await Student.find({});
+      console.log("student=>", student);
       res.render("student.ejs", {
         student: student,
         user: req.user,

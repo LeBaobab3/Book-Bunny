@@ -1,0 +1,22 @@
+<%- include('partials/header') -%>
+<div class="container mt-5">
+  <form method="post" class="form-control sm-col-12 md-col-6">
+    <select required class="form-select">
+      <option value="" hidden>Select Book</option>
+      <% for(var i=0; i<allBook.length; i++) {%>
+      <option><%= allBook[i].title %></option>
+      <% } %>
+    </select>
+
+    <select required class="form-select">
+      <option value="" hidden>Select Student</option>
+      <% for(var i=0; i<allStudent.length; i++) {%>
+        <option><%= allStudent[i].firstName %>  <%= allStudent[i].lastName %></option>
+        <% } %>
+    </select>
+
+    <button type="submit" class="btn btn-primary">Created</button>
+  </form>
+</div>
+
+<%- include('partials/footer') -%>

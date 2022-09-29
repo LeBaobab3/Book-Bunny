@@ -21,8 +21,37 @@
                 <label for="registered_on" class="form-label">Date Registered</label>
                 <input type="date"  id="registered_on" name="registered_on"></textarea>
               </div>
+            
               <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
             </form>
+
+            <table>
+              <thead>
+              <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Checked Out</th>
+                <th>Due Date</th>
+                <th>Renew</th>
+                
+              </tr>
+              </thead>
+
+              <tbody>
+                <% for(var i=0; i<student.length; i++) {%>
+                 <tr>
+                  <td><%= student[i].firstName %></td>
+                  <td><%= student[i].lastName %></td>
+                  <td>--</td>
+                  <td>--</td>
+                  <td>--</td>
+                 </tr>
+               <% } %>
+                
+              </tbody>
+             
+            
+            </table>
 
 
           </div>
@@ -30,7 +59,7 @@
 
    
         
-     </table>
+  
         <div class="row justify-content-center mt-5">
           <a class="btn btn-primary" href="/dash">Return to Dashboard</a>
         </div>  
@@ -38,4 +67,4 @@
     </div>
   </div>
 </div>
-<%- include('partials/footer') -%>
+<%- include('partials/footer')-%>
