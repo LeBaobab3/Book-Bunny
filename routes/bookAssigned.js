@@ -6,5 +6,5 @@ const { ensureAuth, ensureGuest } = require("../middleware/auth");
 
 router.get("/", ensureAuth, bookAssignedController.getAssignedBook);
 router.post("/", ensureAuth, bookAssignedController.createAssigndBook);
-
+router.post("/received", ensureAuth, bookAssignedController.bookReceived);
 module.exports = router;

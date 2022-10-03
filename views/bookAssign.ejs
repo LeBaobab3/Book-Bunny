@@ -1,22 +1,60 @@
 <%- include('partials/header') -%>
 <div class="container mt-5">
-  <form method="post" class="form-control sm-col-12 md-col-6">
-    <select required class="form-select">
+  <form method="post"  class=" sm-col-12 md-col-6">
+    <select name="bookId" required class="form-select">
       <option value="" hidden>Select Book</option>
       <% for(var i=0; i<allBook.length; i++) {%>
-      <option><%= allBook[i].title %></option>
+      <option value="<%= allBook[i]._id %>"><%= allBook[i].title %></option>
       <% } %>
     </select>
 
-    <select required class="form-select">
+    <select name="studentId" required class="form-select">
       <option value="" hidden>Select Student</option>
       <% for(var i=0; i<allStudent.length; i++) {%>
-        <option><%= allStudent[i].firstName %>  <%= allStudent[i].lastName %></option>
+        <option  value="<%= allStudent[i]._id %>"><%= allStudent[i].firstName %>  <%= allStudent[i].lastName %></option>
         <% } %>
     </select>
 
     <button type="submit" class="btn btn-primary">Created</button>
   </form>
+  </br>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Book Name</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Status</th>
+      <th>Given At</th>
+      <th>Received At</th>
+      <th>Action</th>
+      
+    </tr>
+    </thead>
+
+    <tbody>
+      <% for(var i=0; i<record.length; i++) {%>
+       <tr scope="row">
+        <td><%= record[i].book.title %></td>
+        <td><%= record[i].student.firstName %></td>
+        <td><%= record[i].student.lastName %></td>
+        <td><%= record[i].status %></td>
+        <td><%= record[i].given_at %></td>
+        <td><%= record[i].received_at %></td>
+        <td>
+          <form method="post" action="/book-assign/received">
+            <input type="hidden" name="id" value="<%= record[i]._id %>"/>
+            <button class="btn btn-primary">Received</button>
+          </form>
+         
+         </td>
+       </tr>
+     <% } %>
+      
+    </tbody>
+   
+  
+  </table>
 </div>
 
 <%- include('partials/footer') -%>
